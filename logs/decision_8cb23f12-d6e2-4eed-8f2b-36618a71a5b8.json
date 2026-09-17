@@ -1,0 +1,132 @@
+{
+  "cycle_id": "8cb23f12-d6e2-4eed-8f2b-36618a71a5b8",
+  "ticker": "AMZN",
+  "deterministic_signal": {
+    "ticker": "AMZN",
+    "as_of": "2026-09-16T19:10:39.966473+00:00",
+    "current_price": 245.74000549316406,
+    "ma5": 251.274,
+    "ma10": 253.813,
+    "ma20": 257.175,
+    "price_above_ma5": false,
+    "price_above_ma10": false,
+    "price_above_ma20": false,
+    "trend_score": -0.5466,
+    "trend_label": "downtrend",
+    "volatility_20d": 0.2729,
+    "momentum_5d_pct": -2.6387,
+    "bullish_confidence": 24,
+    "bearish_confidence": 76
+  },
+  "consensus_result": {
+    "ticker": "AMZN",
+    "passes": [
+      {
+        "pass_id": "pass_a",
+        "ticker": "AMZN",
+        "direction": "sell",
+        "confidence": 78,
+        "raw_rationale": "Weakening AWS growth, macro uncertainty, and strong bearish price signals suggest downside risk outweighs upside.",
+        "model_name": "groq:openai/gpt-oss-120b@T0.2"
+      },
+      {
+        "pass_id": "pass_b",
+        "ticker": "AMZN",
+        "direction": "sell",
+        "confidence": 78,
+        "raw_rationale": "Price is in a downtrend below moving averages, momentum negative, and earnings show modest growth amid macro uncertainty.",
+        "model_name": "groq:openai/gpt-oss-120b@T0.7"
+      },
+      {
+        "pass_id": "pass_c",
+        "ticker": "AMZN",
+        "direction": "hold",
+        "confidence": 60,
+        "raw_rationale": "Earnings largely flat with modest margin improvement; price below MAs and bearish trend suggests hold.",
+        "model_name": "groq:openai/gpt-oss-20b@T0.4"
+      }
+    ],
+    "majority_direction": "sell",
+    "agreement_ratio": 0.6667,
+    "avg_confidence_of_majority": 78.0,
+    "deterministic_signal_agrees": true,
+    "consensus_score": 0.784,
+    "approved": true,
+    "rejection_reasons": []
+  },
+  "risk_gate_result": {
+    "ticker": "AMZN",
+    "direction": "sell",
+    "proposed_position_size_usd": 300.0,
+    "approved": false,
+    "rejection_reasons": [
+      "Cannot sell AMZN: no existing position (current holding = 0.0)."
+    ],
+    "final_position_size_usd": 0.0,
+    "checked_at": "2026-09-16T19:10:39.966669+00:00"
+  },
+  "naive_baseline": {
+    "ticker": "AMZN",
+    "direction": "sell",
+    "confidence": 78,
+    "would_execute": true,
+    "note": "Naive baseline: single LLM call, no consensus, no deterministic check."
+  },
+  "memory_record": {
+    "record_id": "8cb23f12-d6e2-4eed-8f2b-36618a71a5b8",
+    "ticker": "AMZN",
+    "decided_at": "2026-09-16T19:10:39.961654+00:00",
+    "embargo_clears_at": "2026-09-17T19:10:39.961654+00:00",
+    "consensus_result": {
+      "ticker": "AMZN",
+      "passes": [
+        {
+          "pass_id": "pass_a",
+          "ticker": "AMZN",
+          "direction": "sell",
+          "confidence": 78,
+          "raw_rationale": "Weakening AWS growth, macro uncertainty, and strong bearish price signals suggest downside risk outweighs upside.",
+          "model_name": "groq:openai/gpt-oss-120b@T0.2"
+        },
+        {
+          "pass_id": "pass_b",
+          "ticker": "AMZN",
+          "direction": "sell",
+          "confidence": 78,
+          "raw_rationale": "Price is in a downtrend below moving averages, momentum negative, and earnings show modest growth amid macro uncertainty.",
+          "model_name": "groq:openai/gpt-oss-120b@T0.7"
+        },
+        {
+          "pass_id": "pass_c",
+          "ticker": "AMZN",
+          "direction": "hold",
+          "confidence": 60,
+          "raw_rationale": "Earnings largely flat with modest margin improvement; price below MAs and bearish trend suggests hold.",
+          "model_name": "groq:openai/gpt-oss-20b@T0.4"
+        }
+      ],
+      "majority_direction": "sell",
+      "agreement_ratio": 0.6667,
+      "avg_confidence_of_majority": 78.0,
+      "deterministic_signal_agrees": true,
+      "consensus_score": 0.784,
+      "approved": true,
+      "rejection_reasons": []
+    },
+    "risk_gate_result": {
+      "ticker": "AMZN",
+      "direction": "sell",
+      "proposed_position_size_usd": 300.0,
+      "approved": false,
+      "rejection_reasons": [
+        "Cannot sell AMZN: no existing position (current holding = 0.0)."
+      ],
+      "final_position_size_usd": 0.0,
+      "checked_at": "2026-09-16T19:10:39.966669+00:00"
+    },
+    "executed": false,
+    "outcome": null
+  },
+  "trade_would_execute": false,
+  "ran_at": "2026-09-16T19:10:39.961654+00:00"
+}

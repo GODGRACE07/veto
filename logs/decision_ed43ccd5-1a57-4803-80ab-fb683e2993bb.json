@@ -1,0 +1,128 @@
+{
+  "cycle_id": "ed43ccd5-1a57-4803-80ab-fb683e2993bb",
+  "ticker": "AAPL",
+  "deterministic_signal": {
+    "ticker": "AAPL",
+    "as_of": "2026-09-11T06:58:47.452072+00:00",
+    "current_price": 326.57000732421875,
+    "ma5": 321.262,
+    "ma10": 320.753,
+    "ma20": 315.2755,
+    "price_above_ma5": true,
+    "price_above_ma10": true,
+    "price_above_ma20": true,
+    "trend_score": 0.6082,
+    "trend_label": "uptrend",
+    "volatility_20d": 0.2347,
+    "momentum_5d_pct": 0.4955,
+    "bullish_confidence": 74,
+    "bearish_confidence": 26
+  },
+  "consensus_result": {
+    "ticker": "AAPL",
+    "passes": [
+      {
+        "pass_id": "pass_a",
+        "ticker": "AAPL",
+        "direction": "hold",
+        "confidence": 55,
+        "raw_rationale": "Mixed earnings with iPhone miss and no guidance offset positive trend, so hold.",
+        "model_name": "groq:openai/gpt-oss-120b@T0.2"
+      },
+      {
+        "pass_id": "pass_b",
+        "ticker": "AAPL",
+        "direction": "buy",
+        "confidence": 78,
+        "raw_rationale": "Uptrend, price above moving averages and bullish momentum dominate modest earnings miss, supporting a buy.",
+        "model_name": "groq:openai/gpt-oss-120b@T0.7"
+      },
+      {
+        "pass_id": "pass_c",
+        "ticker": "AAPL",
+        "direction": "buy",
+        "confidence": 70,
+        "raw_rationale": "Apple\u2019s services beat and steady demand outweigh iPhone dip; price above moving averages supports a buy.",
+        "model_name": "groq:openai/gpt-oss-20b@T0.4"
+      }
+    ],
+    "majority_direction": "buy",
+    "agreement_ratio": 0.6667,
+    "avg_confidence_of_majority": 74.0,
+    "deterministic_signal_agrees": true,
+    "consensus_score": 0.772,
+    "approved": true,
+    "rejection_reasons": []
+  },
+  "risk_gate_result": {
+    "ticker": "AAPL",
+    "direction": "buy",
+    "proposed_position_size_usd": 300.0,
+    "approved": true,
+    "rejection_reasons": [],
+    "final_position_size_usd": 300.0,
+    "checked_at": "2026-09-11T06:58:47.452152+00:00"
+  },
+  "naive_baseline": {
+    "ticker": "AAPL",
+    "direction": "hold",
+    "confidence": 55,
+    "would_execute": true,
+    "note": "Naive baseline: single LLM call, no consensus, no deterministic check."
+  },
+  "memory_record": {
+    "record_id": "ed43ccd5-1a57-4803-80ab-fb683e2993bb",
+    "ticker": "AAPL",
+    "decided_at": "2026-09-11T06:58:47.450590+00:00",
+    "embargo_clears_at": "2026-09-12T06:58:47.450590+00:00",
+    "consensus_result": {
+      "ticker": "AAPL",
+      "passes": [
+        {
+          "pass_id": "pass_a",
+          "ticker": "AAPL",
+          "direction": "hold",
+          "confidence": 55,
+          "raw_rationale": "Mixed earnings with iPhone miss and no guidance offset positive trend, so hold.",
+          "model_name": "groq:openai/gpt-oss-120b@T0.2"
+        },
+        {
+          "pass_id": "pass_b",
+          "ticker": "AAPL",
+          "direction": "buy",
+          "confidence": 78,
+          "raw_rationale": "Uptrend, price above moving averages and bullish momentum dominate modest earnings miss, supporting a buy.",
+          "model_name": "groq:openai/gpt-oss-120b@T0.7"
+        },
+        {
+          "pass_id": "pass_c",
+          "ticker": "AAPL",
+          "direction": "buy",
+          "confidence": 70,
+          "raw_rationale": "Apple\u2019s services beat and steady demand outweigh iPhone dip; price above moving averages supports a buy.",
+          "model_name": "groq:openai/gpt-oss-20b@T0.4"
+        }
+      ],
+      "majority_direction": "buy",
+      "agreement_ratio": 0.6667,
+      "avg_confidence_of_majority": 74.0,
+      "deterministic_signal_agrees": true,
+      "consensus_score": 0.772,
+      "approved": true,
+      "rejection_reasons": []
+    },
+    "risk_gate_result": {
+      "ticker": "AAPL",
+      "direction": "buy",
+      "proposed_position_size_usd": 300.0,
+      "approved": true,
+      "rejection_reasons": [],
+      "final_position_size_usd": 300.0,
+      "checked_at": "2026-09-11T06:58:47.452152+00:00"
+    },
+    "executed": true,
+    "outcome": null
+  },
+  "trade_would_execute": true,
+  "ran_at": "2026-09-11T06:58:47.450590+00:00"
+}

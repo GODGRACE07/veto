@@ -1,0 +1,140 @@
+{
+  "cycle_id": "8dc285e6-ddc3-404a-ac6d-6176060a89c8",
+  "ticker": "TSLA",
+  "deterministic_signal": {
+    "ticker": "TSLA",
+    "as_of": "2026-09-16T19:09:46.612143+00:00",
+    "current_price": 356.8699951171875,
+    "ma5": 360.284,
+    "ma10": 362.485,
+    "ma20": 357.829,
+    "price_above_ma5": false,
+    "price_above_ma10": false,
+    "price_above_ma20": false,
+    "trend_score": 0.3995,
+    "trend_label": "sideways",
+    "volatility_20d": 0.5115,
+    "momentum_5d_pct": -2.9744,
+    "bullish_confidence": 31,
+    "bearish_confidence": 69
+  },
+  "consensus_result": {
+    "ticker": "TSLA",
+    "passes": [
+      {
+        "pass_id": "pass_a",
+        "ticker": "TSLA",
+        "direction": "sell",
+        "confidence": 70,
+        "raw_rationale": "Weak margins, EPS miss, high capex and bearish price signals suggest downside risk outweighs revenue beat.",
+        "model_name": "groq:openai/gpt-oss-120b@T0.2"
+      },
+      {
+        "pass_id": "pass_b",
+        "ticker": "TSLA",
+        "direction": "sell",
+        "confidence": 70,
+        "raw_rationale": "Negative momentum and bearish rule signals outweigh mixed earnings, suggesting a sell.",
+        "model_name": "groq:openai/gpt-oss-120b@T0.7"
+      },
+      {
+        "pass_id": "pass_c",
+        "ticker": "TSLA",
+        "direction": "hold",
+        "confidence": 55,
+        "raw_rationale": "Revenue beat and delivery growth offset margin decline, but price weakness and high debt suggest caution.",
+        "model_name": "groq:openai/gpt-oss-20b@T0.4"
+      }
+    ],
+    "majority_direction": "sell",
+    "agreement_ratio": 0.6667,
+    "avg_confidence_of_majority": 70.0,
+    "deterministic_signal_agrees": false,
+    "consensus_score": 0.51,
+    "approved": false,
+    "rejection_reasons": [
+      "Deterministic signal disagreement: majority direction 'sell' is not supported by price data (trend_label=sideways, bullish_confidence=31, bearish_confidence=69). The LLM's reasoning does not match what the price data actually shows."
+    ]
+  },
+  "risk_gate_result": {
+    "ticker": "TSLA",
+    "direction": "sell",
+    "proposed_position_size_usd": 300.0,
+    "approved": false,
+    "rejection_reasons": [
+      "Consensus scorer rejected this trade (reasons: Deterministic signal disagreement: majority direction 'sell' is not supported by price data (trend_label=sideways, bullish_confidence=31, bearish_confidence=69). The LLM's reasoning does not match what the price data actually shows.). Risk gate does not override consensus rejections.",
+      "Consensus score 0.510 is below the execution threshold of 0.65.",
+      "Cannot sell TSLA: no existing position (current holding = 0.0)."
+    ],
+    "final_position_size_usd": 0.0,
+    "checked_at": "2026-09-16T19:09:46.612332+00:00"
+  },
+  "naive_baseline": {
+    "ticker": "TSLA",
+    "direction": "sell",
+    "confidence": 70,
+    "would_execute": true,
+    "note": "Naive baseline: single LLM call, no consensus, no deterministic check."
+  },
+  "memory_record": {
+    "record_id": "8dc285e6-ddc3-404a-ac6d-6176060a89c8",
+    "ticker": "TSLA",
+    "decided_at": "2026-09-16T19:09:46.608867+00:00",
+    "embargo_clears_at": "2026-09-17T19:09:46.608867+00:00",
+    "consensus_result": {
+      "ticker": "TSLA",
+      "passes": [
+        {
+          "pass_id": "pass_a",
+          "ticker": "TSLA",
+          "direction": "sell",
+          "confidence": 70,
+          "raw_rationale": "Weak margins, EPS miss, high capex and bearish price signals suggest downside risk outweighs revenue beat.",
+          "model_name": "groq:openai/gpt-oss-120b@T0.2"
+        },
+        {
+          "pass_id": "pass_b",
+          "ticker": "TSLA",
+          "direction": "sell",
+          "confidence": 70,
+          "raw_rationale": "Negative momentum and bearish rule signals outweigh mixed earnings, suggesting a sell.",
+          "model_name": "groq:openai/gpt-oss-120b@T0.7"
+        },
+        {
+          "pass_id": "pass_c",
+          "ticker": "TSLA",
+          "direction": "hold",
+          "confidence": 55,
+          "raw_rationale": "Revenue beat and delivery growth offset margin decline, but price weakness and high debt suggest caution.",
+          "model_name": "groq:openai/gpt-oss-20b@T0.4"
+        }
+      ],
+      "majority_direction": "sell",
+      "agreement_ratio": 0.6667,
+      "avg_confidence_of_majority": 70.0,
+      "deterministic_signal_agrees": false,
+      "consensus_score": 0.51,
+      "approved": false,
+      "rejection_reasons": [
+        "Deterministic signal disagreement: majority direction 'sell' is not supported by price data (trend_label=sideways, bullish_confidence=31, bearish_confidence=69). The LLM's reasoning does not match what the price data actually shows."
+      ]
+    },
+    "risk_gate_result": {
+      "ticker": "TSLA",
+      "direction": "sell",
+      "proposed_position_size_usd": 300.0,
+      "approved": false,
+      "rejection_reasons": [
+        "Consensus scorer rejected this trade (reasons: Deterministic signal disagreement: majority direction 'sell' is not supported by price data (trend_label=sideways, bullish_confidence=31, bearish_confidence=69). The LLM's reasoning does not match what the price data actually shows.). Risk gate does not override consensus rejections.",
+        "Consensus score 0.510 is below the execution threshold of 0.65.",
+        "Cannot sell TSLA: no existing position (current holding = 0.0)."
+      ],
+      "final_position_size_usd": 0.0,
+      "checked_at": "2026-09-16T19:09:46.612332+00:00"
+    },
+    "executed": false,
+    "outcome": null
+  },
+  "trade_would_execute": false,
+  "ran_at": "2026-09-16T19:09:46.608867+00:00"
+}

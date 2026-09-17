@@ -1,0 +1,108 @@
+[
+  {
+    "record_id": "ed43ccd5-1a57-4803-80ab-fb683e2993bb",
+    "ticker": "AAPL",
+    "decided_at": "2026-09-11T06:58:47.450590+00:00",
+    "embargo_clears_at": "2026-09-12T06:58:47.450590+00:00",
+    "consensus_result": {
+      "ticker": "AAPL",
+      "passes": [
+        {
+          "pass_id": "pass_a",
+          "ticker": "AAPL",
+          "direction": "hold",
+          "confidence": 55,
+          "raw_rationale": "Mixed earnings with iPhone miss and no guidance offset positive trend, so hold.",
+          "model_name": "groq:openai/gpt-oss-120b@T0.2"
+        },
+        {
+          "pass_id": "pass_b",
+          "ticker": "AAPL",
+          "direction": "buy",
+          "confidence": 78,
+          "raw_rationale": "Uptrend, price above moving averages and bullish momentum dominate modest earnings miss, supporting a buy.",
+          "model_name": "groq:openai/gpt-oss-120b@T0.7"
+        },
+        {
+          "pass_id": "pass_c",
+          "ticker": "AAPL",
+          "direction": "buy",
+          "confidence": 70,
+          "raw_rationale": "Apple\u2019s services beat and steady demand outweigh iPhone dip; price above moving averages supports a buy.",
+          "model_name": "groq:openai/gpt-oss-20b@T0.4"
+        }
+      ],
+      "majority_direction": "buy",
+      "agreement_ratio": 0.6667,
+      "avg_confidence_of_majority": 74.0,
+      "deterministic_signal_agrees": true,
+      "consensus_score": 0.772,
+      "approved": true,
+      "rejection_reasons": []
+    },
+    "risk_gate_result": {
+      "ticker": "AAPL",
+      "direction": "buy",
+      "proposed_position_size_usd": 300.0,
+      "approved": true,
+      "rejection_reasons": [],
+      "final_position_size_usd": 300.0,
+      "checked_at": "2026-09-11T06:58:47.452152+00:00"
+    },
+    "executed": true,
+    "outcome": null
+  },
+  {
+    "record_id": "ee27b354-5603-40a1-aba5-3e48adeee21c",
+    "ticker": "AAPL",
+    "decided_at": "2026-09-16T19:10:13.029427+00:00",
+    "embargo_clears_at": "2026-09-17T19:10:13.029427+00:00",
+    "consensus_result": {
+      "ticker": "AAPL",
+      "passes": [
+        {
+          "pass_id": "pass_a",
+          "ticker": "AAPL",
+          "direction": "hold",
+          "confidence": 65,
+          "raw_rationale": "Earnings are mixed but price shows strong uptrend; downside risk warrants a cautious hold.",
+          "model_name": "groq:openai/gpt-oss-120b@T0.2"
+        },
+        {
+          "pass_id": "pass_b",
+          "ticker": "AAPL",
+          "direction": "buy",
+          "confidence": 85,
+          "raw_rationale": "Strong uptrend, price above moving averages and high bullish confidence outweigh modest earnings miss.",
+          "model_name": "groq:openai/gpt-oss-120b@T0.7"
+        },
+        {
+          "pass_id": "pass_c",
+          "ticker": "AAPL",
+          "direction": "buy",
+          "confidence": 80,
+          "raw_rationale": "Services beat expectations and trend remains bullish, supporting a buy.",
+          "model_name": "groq:openai/gpt-oss-20b@T0.4"
+        }
+      ],
+      "majority_direction": "buy",
+      "agreement_ratio": 0.6667,
+      "avg_confidence_of_majority": 82.5,
+      "deterministic_signal_agrees": true,
+      "consensus_score": 0.7975,
+      "approved": true,
+      "rejection_reasons": []
+    },
+    "risk_gate_result": {
+      "ticker": "AAPL",
+      "direction": "buy",
+      "proposed_position_size_usd": 300.0,
+      "approved": true,
+      "rejection_reasons": [],
+      "final_position_size_usd": 300.0,
+      "checked_at": "2026-09-16T19:10:13.034231+00:00"
+    },
+    "executed": true,
+    "outcome": null
+  }
+]

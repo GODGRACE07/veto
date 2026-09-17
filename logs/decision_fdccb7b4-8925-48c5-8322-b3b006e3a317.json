@@ -1,0 +1,140 @@
+{
+  "cycle_id": "fdccb7b4-8925-48c5-8322-b3b006e3a317",
+  "ticker": "MSFT",
+  "deterministic_signal": {
+    "ticker": "MSFT",
+    "as_of": "2026-09-11T06:58:56.479634+00:00",
+    "current_price": 492.44000244140625,
+    "ma5": 497.572,
+    "ma10": 501.158,
+    "ma20": 494.2674,
+    "price_above_ma5": false,
+    "price_above_ma10": false,
+    "price_above_ma20": false,
+    "trend_score": 0.3295,
+    "trend_label": "sideways",
+    "volatility_20d": 0.218,
+    "momentum_5d_pct": -0.8816,
+    "bullish_confidence": 32,
+    "bearish_confidence": 68
+  },
+  "consensus_result": {
+    "ticker": "MSFT",
+    "passes": [
+      {
+        "pass_id": "pass_a",
+        "ticker": "MSFT",
+        "direction": "sell",
+        "confidence": 70,
+        "raw_rationale": "Below\u2011expected Azure growth, higher capex hurting cash flow and negative price momentum suggest downside risk outweighs earnings beat.",
+        "model_name": "groq:openai/gpt-oss-120b@T0.2"
+      },
+      {
+        "pass_id": "pass_b",
+        "ticker": "MSFT",
+        "direction": "sell",
+        "confidence": 70,
+        "raw_rationale": "Price below short-term averages, negative momentum and bearish rule confidence outweigh mixed earnings news.",
+        "model_name": "groq:openai/gpt-oss-120b@T0.7"
+      },
+      {
+        "pass_id": "pass_c",
+        "ticker": "MSFT",
+        "direction": "hold",
+        "confidence": 60,
+        "raw_rationale": "Earnings beat and AI outlook positive, but higher capex and lagging cloud growth temper enthusiasm.",
+        "model_name": "groq:openai/gpt-oss-20b@T0.4"
+      }
+    ],
+    "majority_direction": "sell",
+    "agreement_ratio": 0.6667,
+    "avg_confidence_of_majority": 70.0,
+    "deterministic_signal_agrees": false,
+    "consensus_score": 0.51,
+    "approved": false,
+    "rejection_reasons": [
+      "Deterministic signal disagreement: majority direction 'sell' is not supported by price data (trend_label=sideways, bullish_confidence=32, bearish_confidence=68). The LLM's reasoning does not match what the price data actually shows."
+    ]
+  },
+  "risk_gate_result": {
+    "ticker": "MSFT",
+    "direction": "sell",
+    "proposed_position_size_usd": 300.0,
+    "approved": false,
+    "rejection_reasons": [
+      "Consensus scorer rejected this trade (reasons: Deterministic signal disagreement: majority direction 'sell' is not supported by price data (trend_label=sideways, bullish_confidence=32, bearish_confidence=68). The LLM's reasoning does not match what the price data actually shows.). Risk gate does not override consensus rejections.",
+      "Consensus score 0.510 is below the execution threshold of 0.65.",
+      "Cannot sell MSFT: no existing position (current holding = 0.0)."
+    ],
+    "final_position_size_usd": 0.0,
+    "checked_at": "2026-09-11T06:58:56.479712+00:00"
+  },
+  "naive_baseline": {
+    "ticker": "MSFT",
+    "direction": "sell",
+    "confidence": 70,
+    "would_execute": true,
+    "note": "Naive baseline: single LLM call, no consensus, no deterministic check."
+  },
+  "memory_record": {
+    "record_id": "fdccb7b4-8925-48c5-8322-b3b006e3a317",
+    "ticker": "MSFT",
+    "decided_at": "2026-09-11T06:58:56.478311+00:00",
+    "embargo_clears_at": "2026-09-12T06:58:56.478311+00:00",
+    "consensus_result": {
+      "ticker": "MSFT",
+      "passes": [
+        {
+          "pass_id": "pass_a",
+          "ticker": "MSFT",
+          "direction": "sell",
+          "confidence": 70,
+          "raw_rationale": "Below\u2011expected Azure growth, higher capex hurting cash flow and negative price momentum suggest downside risk outweighs earnings beat.",
+          "model_name": "groq:openai/gpt-oss-120b@T0.2"
+        },
+        {
+          "pass_id": "pass_b",
+          "ticker": "MSFT",
+          "direction": "sell",
+          "confidence": 70,
+          "raw_rationale": "Price below short-term averages, negative momentum and bearish rule confidence outweigh mixed earnings news.",
+          "model_name": "groq:openai/gpt-oss-120b@T0.7"
+        },
+        {
+          "pass_id": "pass_c",
+          "ticker": "MSFT",
+          "direction": "hold",
+          "confidence": 60,
+          "raw_rationale": "Earnings beat and AI outlook positive, but higher capex and lagging cloud growth temper enthusiasm.",
+          "model_name": "groq:openai/gpt-oss-20b@T0.4"
+        }
+      ],
+      "majority_direction": "sell",
+      "agreement_ratio": 0.6667,
+      "avg_confidence_of_majority": 70.0,
+      "deterministic_signal_agrees": false,
+      "consensus_score": 0.51,
+      "approved": false,
+      "rejection_reasons": [
+        "Deterministic signal disagreement: majority direction 'sell' is not supported by price data (trend_label=sideways, bullish_confidence=32, bearish_confidence=68). The LLM's reasoning does not match what the price data actually shows."
+      ]
+    },
+    "risk_gate_result": {
+      "ticker": "MSFT",
+      "direction": "sell",
+      "proposed_position_size_usd": 300.0,
+      "approved": false,
+      "rejection_reasons": [
+        "Consensus scorer rejected this trade (reasons: Deterministic signal disagreement: majority direction 'sell' is not supported by price data (trend_label=sideways, bullish_confidence=32, bearish_confidence=68). The LLM's reasoning does not match what the price data actually shows.). Risk gate does not override consensus rejections.",
+        "Consensus score 0.510 is below the execution threshold of 0.65.",
+        "Cannot sell MSFT: no existing position (current holding = 0.0)."
+      ],
+      "final_position_size_usd": 0.0,
+      "checked_at": "2026-09-11T06:58:56.479712+00:00"
+    },
+    "executed": false,
+    "outcome": null
+  },
+  "trade_would_execute": false,
+  "ran_at": "2026-09-11T06:58:56.478311+00:00"
+}

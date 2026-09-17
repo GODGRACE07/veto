@@ -1,0 +1,140 @@
+{
+  "cycle_id": "ea8645b0-23b8-4784-ab5c-70520927ef58",
+  "ticker": "AMZN",
+  "deterministic_signal": {
+    "ticker": "AMZN",
+    "as_of": "2026-09-11T06:59:05.081826+00:00",
+    "current_price": 251.88999938964844,
+    "ma5": 255.734,
+    "ma10": 257.103,
+    "ma20": 259.378,
+    "price_above_ma5": false,
+    "price_above_ma10": false,
+    "price_above_ma20": false,
+    "trend_score": -0.3774,
+    "trend_label": "sideways",
+    "volatility_20d": 0.2511,
+    "momentum_5d_pct": -1.2119,
+    "bullish_confidence": 26,
+    "bearish_confidence": 74
+  },
+  "consensus_result": {
+    "ticker": "AMZN",
+    "passes": [
+      {
+        "pass_id": "pass_a",
+        "ticker": "AMZN",
+        "direction": "sell",
+        "confidence": 70,
+        "raw_rationale": "Earnings meet estimates but growth slows, price below moving averages, negative momentum, high bearish confidence suggests sell.",
+        "model_name": "groq:openai/gpt-oss-120b@T0.2"
+      },
+      {
+        "pass_id": "pass_b",
+        "ticker": "AMZN",
+        "direction": "sell",
+        "confidence": 80,
+        "raw_rationale": "Price below moving averages, negative momentum and bearish rule confidence outweigh modest earnings positives, indicating a sell.",
+        "model_name": "groq:openai/gpt-oss-120b@T0.7"
+      },
+      {
+        "pass_id": "pass_c",
+        "ticker": "AMZN",
+        "direction": "hold",
+        "confidence": 60,
+        "raw_rationale": "Fundamentals solid but price below trend and negative momentum, so hold.",
+        "model_name": "groq:openai/gpt-oss-20b@T0.4"
+      }
+    ],
+    "majority_direction": "sell",
+    "agreement_ratio": 0.6667,
+    "avg_confidence_of_majority": 75.0,
+    "deterministic_signal_agrees": false,
+    "consensus_score": 0.525,
+    "approved": false,
+    "rejection_reasons": [
+      "Deterministic signal disagreement: majority direction 'sell' is not supported by price data (trend_label=sideways, bullish_confidence=26, bearish_confidence=74). The LLM's reasoning does not match what the price data actually shows."
+    ]
+  },
+  "risk_gate_result": {
+    "ticker": "AMZN",
+    "direction": "sell",
+    "proposed_position_size_usd": 300.0,
+    "approved": false,
+    "rejection_reasons": [
+      "Consensus scorer rejected this trade (reasons: Deterministic signal disagreement: majority direction 'sell' is not supported by price data (trend_label=sideways, bullish_confidence=26, bearish_confidence=74). The LLM's reasoning does not match what the price data actually shows.). Risk gate does not override consensus rejections.",
+      "Consensus score 0.525 is below the execution threshold of 0.65.",
+      "Cannot sell AMZN: no existing position (current holding = 0.0)."
+    ],
+    "final_position_size_usd": 0.0,
+    "checked_at": "2026-09-11T06:59:05.081971+00:00"
+  },
+  "naive_baseline": {
+    "ticker": "AMZN",
+    "direction": "sell",
+    "confidence": 70,
+    "would_execute": true,
+    "note": "Naive baseline: single LLM call, no consensus, no deterministic check."
+  },
+  "memory_record": {
+    "record_id": "ea8645b0-23b8-4784-ab5c-70520927ef58",
+    "ticker": "AMZN",
+    "decided_at": "2026-09-11T06:59:05.079186+00:00",
+    "embargo_clears_at": "2026-09-12T06:59:05.079186+00:00",
+    "consensus_result": {
+      "ticker": "AMZN",
+      "passes": [
+        {
+          "pass_id": "pass_a",
+          "ticker": "AMZN",
+          "direction": "sell",
+          "confidence": 70,
+          "raw_rationale": "Earnings meet estimates but growth slows, price below moving averages, negative momentum, high bearish confidence suggests sell.",
+          "model_name": "groq:openai/gpt-oss-120b@T0.2"
+        },
+        {
+          "pass_id": "pass_b",
+          "ticker": "AMZN",
+          "direction": "sell",
+          "confidence": 80,
+          "raw_rationale": "Price below moving averages, negative momentum and bearish rule confidence outweigh modest earnings positives, indicating a sell.",
+          "model_name": "groq:openai/gpt-oss-120b@T0.7"
+        },
+        {
+          "pass_id": "pass_c",
+          "ticker": "AMZN",
+          "direction": "hold",
+          "confidence": 60,
+          "raw_rationale": "Fundamentals solid but price below trend and negative momentum, so hold.",
+          "model_name": "groq:openai/gpt-oss-20b@T0.4"
+        }
+      ],
+      "majority_direction": "sell",
+      "agreement_ratio": 0.6667,
+      "avg_confidence_of_majority": 75.0,
+      "deterministic_signal_agrees": false,
+      "consensus_score": 0.525,
+      "approved": false,
+      "rejection_reasons": [
+        "Deterministic signal disagreement: majority direction 'sell' is not supported by price data (trend_label=sideways, bullish_confidence=26, bearish_confidence=74). The LLM's reasoning does not match what the price data actually shows."
+      ]
+    },
+    "risk_gate_result": {
+      "ticker": "AMZN",
+      "direction": "sell",
+      "proposed_position_size_usd": 300.0,
+      "approved": false,
+      "rejection_reasons": [
+        "Consensus scorer rejected this trade (reasons: Deterministic signal disagreement: majority direction 'sell' is not supported by price data (trend_label=sideways, bullish_confidence=26, bearish_confidence=74). The LLM's reasoning does not match what the price data actually shows.). Risk gate does not override consensus rejections.",
+        "Consensus score 0.525 is below the execution threshold of 0.65.",
+        "Cannot sell AMZN: no existing position (current holding = 0.0)."
+      ],
+      "final_position_size_usd": 0.0,
+      "checked_at": "2026-09-11T06:59:05.081971+00:00"
+    },
+    "executed": false,
+    "outcome": null
+  },
+  "trade_would_execute": false,
+  "ran_at": "2026-09-11T06:59:05.079186+00:00"
+}
