@@ -112,5 +112,60 @@
     },
     "executed": false,
     "outcome": null
+  },
+  {
+    "record_id": "071a519e-30a1-4bfb-9a91-afd5a94a1c38",
+    "ticker": "AMZN",
+    "decided_at": "2026-09-18T08:12:55.009921+00:00",
+    "embargo_clears_at": "2026-09-19T08:12:55.009921+00:00",
+    "consensus_result": {
+      "ticker": "AMZN",
+      "passes": [
+        {
+          "pass_id": "pass_a",
+          "ticker": "AMZN",
+          "direction": "sell",
+          "confidence": 65,
+          "raw_rationale": "Downtrend, weaker momentum and macro uncertainty outweigh modest earnings beat, suggesting downside risk.",
+          "model_name": "groq:openai/gpt-oss-120b@T0.2"
+        },
+        {
+          "pass_id": "pass_b",
+          "ticker": "AMZN",
+          "direction": "sell",
+          "confidence": 65,
+          "raw_rationale": "Downtrend, negative momentum and bearish confidence outweigh modest earnings beat.",
+          "model_name": "groq:openai/gpt-oss-120b@T0.7"
+        },
+        {
+          "pass_id": "pass_c",
+          "ticker": "AMZN",
+          "direction": "hold",
+          "confidence": 55,
+          "raw_rationale": "Earnings solid but AWS growth slowing and macro caution suggest no clear upside; fundamentals stable, market sentiment slightly bearish.",
+          "model_name": "groq:openai/gpt-oss-20b@T0.4"
+        }
+      ],
+      "majority_direction": "sell",
+      "agreement_ratio": 0.6667,
+      "avg_confidence_of_majority": 65.0,
+      "deterministic_signal_agrees": true,
+      "consensus_score": 0.745,
+      "approved": true,
+      "rejection_reasons": []
+    },
+    "risk_gate_result": {
+      "ticker": "AMZN",
+      "direction": "sell",
+      "proposed_position_size_usd": 300.0,
+      "approved": false,
+      "rejection_reasons": [
+        "Cannot sell AMZN: no existing position (current holding = 0.0)."
+      ],
+      "final_position_size_usd": 0.0,
+      "checked_at": "2026-09-18T08:12:55.019589+00:00"
+    },
+    "executed": false,
+    "outcome": null
   }
 ]

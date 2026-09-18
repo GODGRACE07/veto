@@ -117,5 +117,58 @@
     },
     "executed": false,
     "outcome": null
+  },
+  {
+    "record_id": "ecc6bbc0-c031-42be-a76f-da047e667e88",
+    "ticker": "NVDA",
+    "decided_at": "2026-09-18T08:11:56.538421+00:00",
+    "embargo_clears_at": "2026-09-19T08:11:56.538421+00:00",
+    "consensus_result": {
+      "ticker": "NVDA",
+      "passes": [
+        {
+          "pass_id": "pass_a",
+          "ticker": "NVDA",
+          "direction": "hold",
+          "confidence": 60,
+          "raw_rationale": "Strong earnings but export and supply risks plus high volatility suggest holding.",
+          "model_name": "groq:openai/gpt-oss-120b@T0.2"
+        },
+        {
+          "pass_id": "pass_b",
+          "ticker": "NVDA",
+          "direction": "hold",
+          "confidence": 60,
+          "raw_rationale": "Earnings beat and strong guidance support buying, but sideways trend and supply concerns suggest holding.",
+          "model_name": "groq:openai/gpt-oss-120b@T0.7"
+        },
+        {
+          "pass_id": "pass_c",
+          "ticker": "NVDA",
+          "direction": "buy",
+          "confidence": 70,
+          "raw_rationale": "Strong earnings beat and positive guidance outweigh export concerns.",
+          "model_name": "groq:openai/gpt-oss-20b@T0.4"
+        }
+      ],
+      "majority_direction": "hold",
+      "agreement_ratio": 0.6667,
+      "avg_confidence_of_majority": 60.0,
+      "deterministic_signal_agrees": true,
+      "consensus_score": 0.73,
+      "approved": true,
+      "rejection_reasons": []
+    },
+    "risk_gate_result": {
+      "ticker": "NVDA",
+      "direction": "hold",
+      "proposed_position_size_usd": 0.0,
+      "approved": true,
+      "rejection_reasons": [],
+      "final_position_size_usd": 0.0,
+      "checked_at": "2026-09-18T08:11:56.541929+00:00"
+    },
+    "executed": true,
+    "outcome": null
   }
 ]

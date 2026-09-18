@@ -1,0 +1,128 @@
+{
+  "cycle_id": "a5d6d26f-88cd-4f51-8f63-73ef9478c828",
+  "ticker": "TSLA",
+  "deterministic_signal": {
+    "ticker": "TSLA",
+    "as_of": "2026-09-18T08:11:25.893230+00:00",
+    "current_price": 366.20001220703125,
+    "ma5": 361.054,
+    "ma10": 363.525,
+    "ma20": 358.6435,
+    "price_above_ma5": true,
+    "price_above_ma10": true,
+    "price_above_ma20": true,
+    "trend_score": 0.4148,
+    "trend_label": "uptrend",
+    "volatility_20d": 0.4962,
+    "momentum_5d_pct": 0.7262,
+    "bullish_confidence": 73,
+    "bearish_confidence": 27
+  },
+  "consensus_result": {
+    "ticker": "TSLA",
+    "passes": [
+      {
+        "pass_id": "pass_a",
+        "ticker": "TSLA",
+        "direction": "hold",
+        "confidence": 60,
+        "raw_rationale": "Mixed earnings and high capex raise downside risk despite price uptrend, so hold.",
+        "model_name": "groq:openai/gpt-oss-120b@T0.2"
+      },
+      {
+        "pass_id": "pass_b",
+        "ticker": "TSLA",
+        "direction": "buy",
+        "confidence": 70,
+        "raw_rationale": "Strong uptrend and bullish momentum outweigh mixed earnings, supporting a buy.",
+        "model_name": "groq:openai/gpt-oss-120b@T0.7"
+      },
+      {
+        "pass_id": "pass_c",
+        "ticker": "TSLA",
+        "direction": "hold",
+        "confidence": 60,
+        "raw_rationale": "Mixed earnings: revenue beat, EPS miss, margins down, but strong deliveries and energy deployment offset, so hold.",
+        "model_name": "groq:openai/gpt-oss-20b@T0.4"
+      }
+    ],
+    "majority_direction": "hold",
+    "agreement_ratio": 0.6667,
+    "avg_confidence_of_majority": 60.0,
+    "deterministic_signal_agrees": true,
+    "consensus_score": 0.73,
+    "approved": true,
+    "rejection_reasons": []
+  },
+  "risk_gate_result": {
+    "ticker": "TSLA",
+    "direction": "hold",
+    "proposed_position_size_usd": 0.0,
+    "approved": true,
+    "rejection_reasons": [],
+    "final_position_size_usd": 0.0,
+    "checked_at": "2026-09-18T08:11:25.893394+00:00"
+  },
+  "naive_baseline": {
+    "ticker": "TSLA",
+    "direction": "hold",
+    "confidence": 60,
+    "would_execute": true,
+    "note": "Naive baseline: single LLM call, no consensus, no deterministic check."
+  },
+  "memory_record": {
+    "record_id": "a5d6d26f-88cd-4f51-8f63-73ef9478c828",
+    "ticker": "TSLA",
+    "decided_at": "2026-09-18T08:11:25.889755+00:00",
+    "embargo_clears_at": "2026-09-19T08:11:25.889755+00:00",
+    "consensus_result": {
+      "ticker": "TSLA",
+      "passes": [
+        {
+          "pass_id": "pass_a",
+          "ticker": "TSLA",
+          "direction": "hold",
+          "confidence": 60,
+          "raw_rationale": "Mixed earnings and high capex raise downside risk despite price uptrend, so hold.",
+          "model_name": "groq:openai/gpt-oss-120b@T0.2"
+        },
+        {
+          "pass_id": "pass_b",
+          "ticker": "TSLA",
+          "direction": "buy",
+          "confidence": 70,
+          "raw_rationale": "Strong uptrend and bullish momentum outweigh mixed earnings, supporting a buy.",
+          "model_name": "groq:openai/gpt-oss-120b@T0.7"
+        },
+        {
+          "pass_id": "pass_c",
+          "ticker": "TSLA",
+          "direction": "hold",
+          "confidence": 60,
+          "raw_rationale": "Mixed earnings: revenue beat, EPS miss, margins down, but strong deliveries and energy deployment offset, so hold.",
+          "model_name": "groq:openai/gpt-oss-20b@T0.4"
+        }
+      ],
+      "majority_direction": "hold",
+      "agreement_ratio": 0.6667,
+      "avg_confidence_of_majority": 60.0,
+      "deterministic_signal_agrees": true,
+      "consensus_score": 0.73,
+      "approved": true,
+      "rejection_reasons": []
+    },
+    "risk_gate_result": {
+      "ticker": "TSLA",
+      "direction": "hold",
+      "proposed_position_size_usd": 0.0,
+      "approved": true,
+      "rejection_reasons": [],
+      "final_position_size_usd": 0.0,
+      "checked_at": "2026-09-18T08:11:25.893394+00:00"
+    },
+    "executed": true,
+    "outcome": null
+  },
+  "trade_would_execute": true,
+  "ran_at": "2026-09-18T08:11:25.889755+00:00"
+}

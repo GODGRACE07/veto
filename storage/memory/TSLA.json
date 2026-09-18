@@ -118,5 +118,58 @@
     },
     "executed": false,
     "outcome": null
+  },
+  {
+    "record_id": "a5d6d26f-88cd-4f51-8f63-73ef9478c828",
+    "ticker": "TSLA",
+    "decided_at": "2026-09-18T08:11:25.889755+00:00",
+    "embargo_clears_at": "2026-09-19T08:11:25.889755+00:00",
+    "consensus_result": {
+      "ticker": "TSLA",
+      "passes": [
+        {
+          "pass_id": "pass_a",
+          "ticker": "TSLA",
+          "direction": "hold",
+          "confidence": 60,
+          "raw_rationale": "Mixed earnings and high capex raise downside risk despite price uptrend, so hold.",
+          "model_name": "groq:openai/gpt-oss-120b@T0.2"
+        },
+        {
+          "pass_id": "pass_b",
+          "ticker": "TSLA",
+          "direction": "buy",
+          "confidence": 70,
+          "raw_rationale": "Strong uptrend and bullish momentum outweigh mixed earnings, supporting a buy.",
+          "model_name": "groq:openai/gpt-oss-120b@T0.7"
+        },
+        {
+          "pass_id": "pass_c",
+          "ticker": "TSLA",
+          "direction": "hold",
+          "confidence": 60,
+          "raw_rationale": "Mixed earnings: revenue beat, EPS miss, margins down, but strong deliveries and energy deployment offset, so hold.",
+          "model_name": "groq:openai/gpt-oss-20b@T0.4"
+        }
+      ],
+      "majority_direction": "hold",
+      "agreement_ratio": 0.6667,
+      "avg_confidence_of_majority": 60.0,
+      "deterministic_signal_agrees": true,
+      "consensus_score": 0.73,
+      "approved": true,
+      "rejection_reasons": []
+    },
+    "risk_gate_result": {
+      "ticker": "TSLA",
+      "direction": "hold",
+      "proposed_position_size_usd": 0.0,
+      "approved": true,
+      "rejection_reasons": [],
+      "final_position_size_usd": 0.0,
+      "checked_at": "2026-09-18T08:11:25.893394+00:00"
+    },
+    "executed": true,
+    "outcome": null
   }
 ]

@@ -1,0 +1,128 @@
+{
+  "cycle_id": "ecc6bbc0-c031-42be-a76f-da047e667e88",
+  "ticker": "NVDA",
+  "deterministic_signal": {
+    "ticker": "NVDA",
+    "as_of": "2026-09-18T08:11:56.541736+00:00",
+    "current_price": 219.33999633789062,
+    "ma5": 214.932,
+    "ma10": 220.0215,
+    "ma20": 218.4354,
+    "price_above_ma5": true,
+    "price_above_ma10": false,
+    "price_above_ma20": true,
+    "trend_score": 0.1379,
+    "trend_label": "sideways",
+    "volatility_20d": 0.4627,
+    "momentum_5d_pct": 0.4488,
+    "bullish_confidence": 59,
+    "bearish_confidence": 41
+  },
+  "consensus_result": {
+    "ticker": "NVDA",
+    "passes": [
+      {
+        "pass_id": "pass_a",
+        "ticker": "NVDA",
+        "direction": "hold",
+        "confidence": 60,
+        "raw_rationale": "Strong earnings but export and supply risks plus high volatility suggest holding.",
+        "model_name": "groq:openai/gpt-oss-120b@T0.2"
+      },
+      {
+        "pass_id": "pass_b",
+        "ticker": "NVDA",
+        "direction": "hold",
+        "confidence": 60,
+        "raw_rationale": "Earnings beat and strong guidance support buying, but sideways trend and supply concerns suggest holding.",
+        "model_name": "groq:openai/gpt-oss-120b@T0.7"
+      },
+      {
+        "pass_id": "pass_c",
+        "ticker": "NVDA",
+        "direction": "buy",
+        "confidence": 70,
+        "raw_rationale": "Strong earnings beat and positive guidance outweigh export concerns.",
+        "model_name": "groq:openai/gpt-oss-20b@T0.4"
+      }
+    ],
+    "majority_direction": "hold",
+    "agreement_ratio": 0.6667,
+    "avg_confidence_of_majority": 60.0,
+    "deterministic_signal_agrees": true,
+    "consensus_score": 0.73,
+    "approved": true,
+    "rejection_reasons": []
+  },
+  "risk_gate_result": {
+    "ticker": "NVDA",
+    "direction": "hold",
+    "proposed_position_size_usd": 0.0,
+    "approved": true,
+    "rejection_reasons": [],
+    "final_position_size_usd": 0.0,
+    "checked_at": "2026-09-18T08:11:56.541929+00:00"
+  },
+  "naive_baseline": {
+    "ticker": "NVDA",
+    "direction": "hold",
+    "confidence": 60,
+    "would_execute": true,
+    "note": "Naive baseline: single LLM call, no consensus, no deterministic check."
+  },
+  "memory_record": {
+    "record_id": "ecc6bbc0-c031-42be-a76f-da047e667e88",
+    "ticker": "NVDA",
+    "decided_at": "2026-09-18T08:11:56.538421+00:00",
+    "embargo_clears_at": "2026-09-19T08:11:56.538421+00:00",
+    "consensus_result": {
+      "ticker": "NVDA",
+      "passes": [
+        {
+          "pass_id": "pass_a",
+          "ticker": "NVDA",
+          "direction": "hold",
+          "confidence": 60,
+          "raw_rationale": "Strong earnings but export and supply risks plus high volatility suggest holding.",
+          "model_name": "groq:openai/gpt-oss-120b@T0.2"
+        },
+        {
+          "pass_id": "pass_b",
+          "ticker": "NVDA",
+          "direction": "hold",
+          "confidence": 60,
+          "raw_rationale": "Earnings beat and strong guidance support buying, but sideways trend and supply concerns suggest holding.",
+          "model_name": "groq:openai/gpt-oss-120b@T0.7"
+        },
+        {
+          "pass_id": "pass_c",
+          "ticker": "NVDA",
+          "direction": "buy",
+          "confidence": 70,
+          "raw_rationale": "Strong earnings beat and positive guidance outweigh export concerns.",
+          "model_name": "groq:openai/gpt-oss-20b@T0.4"
+        }
+      ],
+      "majority_direction": "hold",
+      "agreement_ratio": 0.6667,
+      "avg_confidence_of_majority": 60.0,
+      "deterministic_signal_agrees": true,
+      "consensus_score": 0.73,
+      "approved": true,
+      "rejection_reasons": []
+    },
+    "risk_gate_result": {
+      "ticker": "NVDA",
+      "direction": "hold",
+      "proposed_position_size_usd": 0.0,
+      "approved": true,
+      "rejection_reasons": [],
+      "final_position_size_usd": 0.0,
+      "checked_at": "2026-09-18T08:11:56.541929+00:00"
+    },
+    "executed": true,
+    "outcome": null
+  },
+  "trade_would_execute": true,
+  "ran_at": "2026-09-18T08:11:56.538421+00:00"
+}

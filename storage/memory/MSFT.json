@@ -116,5 +116,63 @@
     },
     "executed": false,
     "outcome": null
+  },
+  {
+    "record_id": "7acb6b96-fc9f-4531-898d-2edb5a514d2d",
+    "ticker": "MSFT",
+    "decided_at": "2026-09-18T08:12:32.962840+00:00",
+    "embargo_clears_at": "2026-09-19T08:12:32.962840+00:00",
+    "consensus_result": {
+      "ticker": "MSFT",
+      "passes": [
+        {
+          "pass_id": "pass_a",
+          "ticker": "MSFT",
+          "direction": "hold",
+          "confidence": 55,
+          "raw_rationale": "Earnings beat but cloud miss and higher capex raise near\u2011term risk, so hold pending clearer growth.",
+          "model_name": "groq:openai/gpt-oss-120b@T0.2"
+        },
+        {
+          "pass_id": "pass_b",
+          "ticker": "MSFT",
+          "direction": "buy",
+          "confidence": 70,
+          "raw_rationale": "Positive price momentum and bullish confidence outweigh mixed earnings, supporting a buy.",
+          "model_name": "groq:openai/gpt-oss-120b@T0.7"
+        },
+        {
+          "pass_id": "pass_c",
+          "ticker": "MSFT",
+          "direction": "buy",
+          "confidence": 80,
+          "raw_rationale": "Earnings beat consensus, solid AI growth outlook, capex hike only short\u2011term cash flow pressure\u2014overall fundamentals support a buy.",
+          "model_name": "groq:openai/gpt-oss-20b@T0.4"
+        }
+      ],
+      "majority_direction": "buy",
+      "agreement_ratio": 0.6667,
+      "avg_confidence_of_majority": 75.0,
+      "deterministic_signal_agrees": false,
+      "consensus_score": 0.525,
+      "approved": false,
+      "rejection_reasons": [
+        "Deterministic signal disagreement: majority direction 'buy' is not supported by price data (trend_label=sideways, bullish_confidence=72, bearish_confidence=28). The LLM's reasoning does not match what the price data actually shows."
+      ]
+    },
+    "risk_gate_result": {
+      "ticker": "MSFT",
+      "direction": "buy",
+      "proposed_position_size_usd": 300.0,
+      "approved": false,
+      "rejection_reasons": [
+        "Consensus scorer rejected this trade (reasons: Deterministic signal disagreement: majority direction 'buy' is not supported by price data (trend_label=sideways, bullish_confidence=72, bearish_confidence=28). The LLM's reasoning does not match what the price data actually shows.). Risk gate does not override consensus rejections.",
+        "Consensus score 0.525 is below the execution threshold of 0.65."
+      ],
+      "final_position_size_usd": 0.0,
+      "checked_at": "2026-09-18T08:12:32.968633+00:00"
+    },
+    "executed": false,
+    "outcome": null
   }
 ]
