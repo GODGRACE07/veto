@@ -390,8 +390,8 @@ for r in all_records:
         "agreement_ratio": consensus["agreement_ratio"],
         "consensus_score": consensus["consensus_score"],
         "det_signal_agrees": consensus["deterministic_signal_agrees"],
-               "rejection_reasons": "; ".join(combined_reasons(consensus, risk)) or "—",
-
+        "would_execute": would_execute,
+        "rejection_reasons": "; ".join(combined_reasons(consensus, risk)) or "—",
     })
 
 df = pd.DataFrame(rows).sort_values("decided_at", ascending=False)
