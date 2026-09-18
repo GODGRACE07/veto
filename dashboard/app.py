@@ -230,6 +230,24 @@ def direction_badge(direction: str) -> str:
     return f'<span class="veto-badge {cls}">{direction.upper()}</span>'
 
 
+def combined_reasons(consensus_result: dict, risk_gate_result: dict) -> list[str]:
+    """
+    Combines consensus + risk-gate rejection reasons, filtering out the
+    risk gate's own restatement of the consensus reasons ("Consensus
+    scorer rejected this trade (reasons: ...)") -- that message exists
+    for programmatic/log clarity (see risk_gate.py's Gate 0), but in
+    the dashboard it duplicates text already shown from
+    consensus_result.rejection_reasons verbatim. Filtering it here
+    keeps every genuinely distinct reason while removing the repeat.
+    """
+    reasons = list(consensus_result["rejection_reasons"])
+    for r in risk_gate_result["rejection_reasons"]:
+        if r.startswith("Consensus scorer rejected this trade"):
+            continue
+        reasons.append(r)
+    return reasons
+
+
 def logo_cell_html(ticker: str) -> str:
     brand = TICKER_BRAND.get(ticker, {"slug": "", "color": BLUE, "mono": ticker[:2]})
     return f"""<div class="veto-row-logo-wrap">
@@ -372,8 +390,8 @@ for r in all_records:
         "agreement_ratio": consensus["agreement_ratio"],
         "consensus_score": consensus["consensus_score"],
         "det_signal_agrees": consensus["deterministic_signal_agrees"],
-        "would_execute": would_execute,
-        "rejection_reasons": "; ".join(consensus["rejection_reasons"] + risk["rejection_reasons"]) or "—",
+               "rejection_reasons": "; ".join(combined_reasons(consensus, risk)) or "—",
+
     })
 
 df = pd.DataFrame(rows).sort_values("decided_at", ascending=False)
@@ -472,7 +490,7 @@ else:
                 st.markdown(logo_cell_html(r.ticker), unsafe_allow_html=True)
             with badge_col:
                 st.markdown(direction_badge(r.consensus_result["majority_direction"]), unsafe_allow_html=True)
-            all_reasons = r.consensus_result["rejection_reasons"] + r.risk_gate_result["rejection_reasons"]
+            all_reasons = combined_reasons(r.consensus_result, r.risk_gate_result)
             reasons_md = "\n".join(f"- {reason}" for reason in all_reasons)
             st.markdown("**Rejection reasons:**")
             st.markdown(reasons_md)
