@@ -198,10 +198,14 @@ st.markdown(
         padding: 0.6rem 0.8rem; font-weight: 700; border-bottom: 2px solid {BORDER};
         white-space: nowrap; position: sticky; top: 0;
     }}
-    table.veto-table td {{
+       table.veto-table td {{
         padding: 0.55rem 0.8rem; border-bottom: 1px solid {BORDER};
         color: {TEXT_PRIMARY}; white-space: nowrap; max-width: 260px;
         overflow: hidden; text-overflow: ellipsis;
+    }}
+    table.veto-table td.veto-wrap-cell {{
+        white-space: normal; max-width: 420px; min-width: 280px;
+        overflow: visible; text-overflow: clip; line-height: 1.4;
     }}
     table.veto-table tr:last-child td {{ border-bottom: none; }}
     table.veto-table tr:hover td {{ background: {BG_PAGE}; }}
@@ -252,21 +256,22 @@ def render_table(df: pd.DataFrame, show_logo_for: str = None, bool_cols: list = 
     for col in display.columns:
         header_cells += f"<th>{html_lib.escape(str(col))}</th>"
 
-    rows_html = ""
+      rows_ html = ""
     for _, row in display.iterrows():
         cells = ""
         if show_logo_for:
             cells += f"<td>{logo_cell_html(str(row[show_logo_for]))}</td>"
         for col in display.columns:
             val = row[col]
+            td_class = ""
             if col in bool_cols:
                 cell = '<span class="veto-check">&#10003;</span>' if val else '<span class="veto-cross">&mdash;</span>'
             else:
                 text = str(val)
                 cell = html_lib.escape(text)
-                if col == "rejection_reasons" and len(text) > 60:
-                    cell = f'<span title="{html_lib.escape(text)}">{html_lib.escape(text[:60])}&hellip;</span>'
-            cells += f"<td>{cell}</td>"
+                if col == "rejection_reasons":
+                    td_class = ' class="veto-wrap-cell"'
+            cells += f"<td{td_class}>{cell}</td>"
         rows_html += f"<tr>{cells}</tr>"
 
     st.markdown(
