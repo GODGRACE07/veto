@@ -198,7 +198,7 @@ st.markdown(
         padding: 0.6rem 0.8rem; font-weight: 700; border-bottom: 2px solid {BORDER};
         white-space: nowrap; position: sticky; top: 0;
     }}
-       table.veto-table td {{
+    table.veto-table td {{
         padding: 0.55rem 0.8rem; border-bottom: 1px solid {BORDER};
         color: {TEXT_PRIMARY}; white-space: nowrap; max-width: 260px;
         overflow: hidden; text-overflow: ellipsis;
@@ -256,7 +256,7 @@ def render_table(df: pd.DataFrame, show_logo_for: str = None, bool_cols: list = 
     for col in display.columns:
         header_cells += f"<th>{html_lib.escape(str(col))}</th>"
 
-      rows_ html = ""
+    rows_html = ""
     for _, row in display.iterrows():
         cells = ""
         if show_logo_for:
