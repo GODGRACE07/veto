@@ -1,0 +1,29 @@
+﻿# Virtual environment
+venv/
+env/
+ENV/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+
+# Environment variables / secrets -- never commit real keys
+.env
+.env.local
+.streamlit/secrets.toml
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+.vscode/settings.json
+*.swp
+
+# NOTE: storage/ and logs/ are intentionally NOT ignored.
+# storage/memory/*.json and storage/paper_ledger/*.json are the
+# real decision history and paper ledger fills -- the actual
+# evidence for this project. They must be committed so the
+# deployed dashboard shows real data, not an empty state.
