@@ -192,7 +192,7 @@ st.markdown(
         overflow-x: auto; border: 1px solid {BORDER}; border-radius: 12px;
         box-shadow: {SHADOW}; background: {BG_CARD}; margin-bottom: 0.5rem;
     }}
-    table.veto-table {{ border-collapse: collapse; width: 100%; font-size: 0.84rem; }}
+    table.veto-table {{ border-collapse: collapse; width: 100%; font-size: 0.84rem; table-layout: fixed; }}
     table.veto-table th {{
         background: {BG_PAGE}; color: {TEXT_PRIMARY}; text-align: left;
         padding: 0.6rem 0.8rem; font-weight: 700; border-bottom: 2px solid {BORDER};
@@ -203,9 +203,9 @@ st.markdown(
         color: {TEXT_PRIMARY}; white-space: nowrap; max-width: 260px;
         overflow: hidden; text-overflow: ellipsis;
     }}
-    table.veto-table td.veto-wrap-cell {{
-        white-space: normal; max-width: 420px; min-width: 280px;
-        overflow: visible; text-overflow: clip; line-height: 1.4;
+       table.veto-table td.veto-wrap-cell {{
+        white-space: normal; width: 32%; min-width: 260px;
+        overflow: visible; text-overflow: clip; line-height: 1.5; word-wrap: break-word;
     }}
     table.veto-table tr:last-child td {{ border-bottom: none; }}
     table.veto-table tr:hover td {{ background: {BG_PAGE}; }}
